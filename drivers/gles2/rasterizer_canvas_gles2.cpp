@@ -1446,6 +1446,9 @@ void RasterizerCanvasGLES2::render_batches(Item::Command *const *p_commands, Ite
 
 							// drawing
 
+							glVertexAttrib4f(VS::ARRAY_COLOR, 1, 1, 1, 1);
+							glDisableVertexAttribArray(VS::ARRAY_COLOR);
+
 							const float *base_buffer = multi_mesh->data.ptr();
 
 							for (int j = 0; j < mesh_data->surfaces.size(); j++) {
